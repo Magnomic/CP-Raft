@@ -576,7 +576,6 @@ HandleRequestPreVoteRequest(i, j, m) ==
                  /\ o3LogNeedSyncIndexes = 0 \* Fully sent
                  
         firstIndexLastTerm == FirstIndexOfTerm(i, LastTerm(log[i]))
-\*        gapIndexes == {index \in firstIndexLastTerm..Len(log[i]) : log[i][index].value = Gap}
 
     IN /\ m.mterm <= currentTerm[i]
        /\ Reply([mtype        |-> RequestPreVoteResponse,
@@ -589,7 +588,6 @@ HandleRequestPreVoteRequest(i, j, m) ==
                  mdest        |-> j,
                  mlastLogTerm |-> LastTerm(log[i]), \* @ Tell candidate my last term to help it sync all my missed log before current term
                  mlastTermStartIndex   |-> firstIndexLastTerm,
-\*                 mgapIndexes  |-> gapIndexes,
                  mo3LogNeedSyncIndexes |-> o3LogNeedSyncIndexes,
                  mo3LogNeedSyncEntries |-> o3LogNeedSyncEntries],
                  m)
@@ -979,7 +977,7 @@ DropMessage(m) ==
 
 ----
 \* Defines how the variables may transition.
-Next == /\ \*   \/ \E i \in Server : Restart(i)
+Next == /\  \/ \E i \in Server : Restart(i)
             \/ \E i \in Server : Timeout(i)
             \/ \E i, j \in Server : RequestPreVote(i, j)
             \/ \E i, j \in Server : RequestVote(i, j)
