@@ -1,5 +1,7 @@
 # CP-Raft: _Concise and Generalized Design of Parallel Raft Protocol_
-Authors: Haiwen Du, Dongjie Zhu, Yulan Zhou, and Zhaoshuo Tian
+
+This work has been submitted to ICDCS-2023
+
 ## Features
 
 - A TLA+ verified consistency protocol that support out-of-order apply and out-of-order commit.
