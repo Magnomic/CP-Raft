@@ -1,6 +1,6 @@
-# CP-Raft: _Concise and Generalized Design of Parallel Raft Protocol_
+# Optimizing Consistency in Distributed Data Services: The CP-Raft Protocol for High-Performance and Fault-Tolerant Replication
 
-This work has been submitted to ICDCS-2023
+This work has been submitted to IEEE Transactions on Service Computing
 
 ## Features
 
