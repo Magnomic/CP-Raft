@@ -1,6 +1,18 @@
 # Optimizing Consistency in Distributed Data Services: The CP-Raft Protocol for High-Performance and Fault-Tolerant Replication
 
-This work has been submitted to IEEE Transactions on Service Computing
+This work has been accepted by IEEE Transactions on Service Computing. [Paper](https://ieeexplore.ieee.org/abstract/document/11027420)
+
+To cite this paper:
+
+```
+@article{du2025optimizing,
+  title={Optimizing Consistency in Distributed Data Services: The CP-Raft Protocol for High-Performance and Fault-Tolerant Replication},
+  author={Du, Haiwen and Wang, Kai and Wu, Yulei and Zhang, Hongke},
+  journal={IEEE Transactions on Services Computing},
+  year={2025},
+  publisher={IEEE}
+}
+```
 
 ## Features
 
